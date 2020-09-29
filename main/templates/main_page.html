@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Registration form</title>
+</head>
+<style>
+    .form-group.form-control {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 300px;
+        border: none;
+    }
+
+    label {
+        color: blue;
+    }
+
+    input {
+        border: 1px solid blue;
+    }
+
+    button {
+        margin-top: 5%;
+    }
+</style>
+<body>
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group form-control" aria-describedby="emailHel">
+            {{ form }}
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+</div>
+</body>
+</htm
